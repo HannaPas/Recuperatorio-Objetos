@@ -1,0 +1,27 @@
+import example.*
+
+describe "Pruebas Presidentes"{
+	test "Denunciando Presidente" {
+		
+	var presidente1 = new Presidente(actosDeGobierno = [], aniosMuerto = 5)
+
+	
+	var denuncia1 = new Denuncias(impacto = 5 , audiencia = 7)
+	
+	
+	
+	presidente1.agregarActosDeGobierno(denuncia1)
+	
+	
+	
+	assert.equals(presidente1.actosDeGobierno().get(0), denuncia1)
+	
+	}
+	
+	test "Imagen Positiva"{
+		var discurso1 = new Discursos (personasPresentes = 20, impacto = 5 , intensidadAplauso = 2 , importancia = 15 )
+		var presidente1 = new Presidente(actosDeGobierno = [discurso1], aniosMuerto = 5)
+		
+		assert.equals(presidente1.imagenPositiva(),5.05)
+	}
+}
